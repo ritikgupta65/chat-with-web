@@ -12,7 +12,7 @@ load_dotenv()
 def get_conversational_chain():
     prompt_template = """
     You are a helpful assistant that answers questions based on the provided context and the previous conversation history. 
-     make sure to provide all the details .If the answer is not in the provided context or chat history, just say, "answer is not present in the context", don't provide the wrong answer.also responce should look like beautiful and in in well structured manner .
+     make sure to provide all the details .If the answer is not in the provided context or chat history, provide responce according to previous conversation history,  but don't provide the wrong answer.also response should look like beautiful and in in well structured manner .
     
     Chat History:\n {chat_history}\n
     Context:\n {context}\n
@@ -26,7 +26,7 @@ def get_conversational_chain():
 
 def chatbot():
     st.set_page_config(page_title="Chat with PDFs", layout="wide")
-    st.title("📄 Chat with Multiple PDFs using Gemini")
+    st.title("📄 Chat with Website using Gemini")
     
     if "messages" not in st.session_state:
         st.session_state.messages = []
