@@ -26,7 +26,7 @@ def get_conversational_chain():
 
 def chatbot():
     st.set_page_config(page_title="Chat with PDFs", layout="wide")
-    st.title("📄 Chat with Website using Gemini")
+    st.title("📄 Chat with Website")
     
     if "messages" not in st.session_state:
         st.session_state.messages = []
