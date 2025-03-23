@@ -8,3 +8,5 @@ python-dotenv
 faiss-cpu
 langchain-core
 bs4
+gunicorn
+fastapi

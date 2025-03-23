@@ -8,7 +8,9 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains.question_answering import load_qa_chain
 from langchain.prompts import PromptTemplate
 load_dotenv()
+from google.generativeai import configure
 
+configure(api_key=os.getenv("GEMINI_API_KEY"))
 def get_conversational_chain():
     prompt_template = """
     You are a helpful assistant that answers questions based on the provided context and the previous conversation history. 
